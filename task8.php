@@ -8,11 +8,11 @@ class Matrix
     protected int $rows;
     protected int $columns;
 
-    public function __construct()
+    public function __construct(array $matrix)
     {
-        $this->matrix = [[4, 2], [3, 1], [1, 5]];
-        $this->rows = 3;
-        $this->columns = 2;
+        $this->matrix = $matrix;
+        $this->rows = count($this->matrix);
+        $this->columns = count($this->matrix[0]);
     }
 
     public function printMatrix()
@@ -84,6 +84,6 @@ class Matrix
     }
 }
 
-$a = new Matrix();
+$a = new Matrix([[4, 2], [3, 1], [1, 5]]);
 $a->multByNumber(2);
 $a->printMatrix();
