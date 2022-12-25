@@ -27,7 +27,7 @@ class Aspirant extends Student
 {
     protected string $researchWork;
 
-    public function __construct(string $name, string $lastName, string $group, float $averageMark, $researchWork)
+    public function __construct(string $name, string $lastName, string $group, float $averageMark, string $researchWork)
     {
         parent::__construct($name, $lastName, $group, $averageMark);
         $this->researchWork = $researchWork;
