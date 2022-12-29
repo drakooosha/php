@@ -4,8 +4,8 @@ namespace task11;
 
 class findPath {
   protected array $coordinates = [];
-  protected int $rows = 10;
-  protected int $columns = 10;
+  protected int $rows = 5;
+  protected int $columns = 5;
   protected int $startX;
   protected int $startY;
   protected int $endX;
@@ -96,7 +96,7 @@ class findPath {
 
   protected function findPath($pointX, $pointY, $visitedPoints = [])  {
     $visitedPoints[] = [$pointX,$pointY];
-    if($this->coordinates[$pointX][$pointY] == 'B') {
+    if($this->coordinates[$pointX][$pointY] == $this->coordinates[$this->endX][$this->endY]) {
       $this->path[] = $visitedPoints;
       
       return null;
